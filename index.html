@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">PhotoShop</div>
+    <form class="uploadSection">
+        <input type="file" id="inputFile" accept="image/*" onchange="loadFile(event)" />
+    </form>
+    <div id="controls">
+        <button id="brightness" class="buttonControl" value="brightness"  onclick=handleBrightness(event)>Brightness</button>
+        <button id="contrast" class="buttonControl" value="contrast" onclick=handleContrast(event)>Contrast</button>
+        <button id="saturate" class="buttonControl" value="saturate" onclick=handleSaturate(event)>Saturation</button>
+        <button id="grayscale" class="buttonControl" value="grayscale" onclick=handleGrayscale(event)>GreyScale</button>
+        <button id="sepia" class="buttonControl" value="sepia" onclick=handleSepia(event)>Sepia</button>
+        <button id="hue-rotate" class="buttonControl" value="hue-rotate" onclick=handleHue(event)>Hue Rotate</button>
+        <button id="invert" class="buttonControl" value="invert" onclick=handleInvert(event)>Invert</button>
+        <button id="opacity" class="buttonControl" value="opacity" onclick=handleOpacity(event)>Opacity</button>
+        <button id="blur" class="buttonControl" value="blur" onclick=handleBlur(event)>Blur</button>
+    </div>
+    <div class="imageArea">
+    <div id="mainBody" id="mainImageArea">
+        <canvas id="mycanvas" width="800px" height="400px" onclick="showCoords(event)" onmousemove="showColor(event)"></canvas>
+    </div>
+    <div class="controlContainer">
+        <div id="imageData"></div>
+        <div id="upDownBrightness">
+            <button id="inc_upDownBrightness">&uarr;</button>
+            <button id="dec_upDownBrightness">&darr;</button>
+        </div>
+        <div id="upDownContrast">
+            <button id="inc_upDownContrast">&uarr;</button>
+            <button id="dec_upDownContrast">&darr;</button>
+        </div>
+        <div id="upDownSepia">
+            <button id="inc_upDownSepia">&uarr;</button>
+            <button id="dec_upDownSepia">&darr;</button>
+        </div>
+        <div id="upDownGrayscale">
+            <button id="inc_upDownGrayscale">&uarr;</button>
+            <button id="dec_upDownGrayscale">&darr;</button>
+        </div>
+        <div id="upDownHue">
+            <button id="inc_upDownHue">&uarr;</button>
+            <button id="dec_upDownHue">&darr;</button>
+        </div>
+        <div id="upDownSaturate">
+            <button id="inc_upDownSaturate">&uarr;</button>
+            <button id="dec_upDownSaturate">&darr;</button>
+        </div>
+        <div id="upDownInvert">
+            <button id="inc_upDownInvert">&uarr;</button>
+            <button id="dec_upDownInvert">&darr;</button>
+        </div>
+        <div id="upDownOpacity">
+            <button id="inc_upDownOpacity">&uarr;</button>
+            <button id="dec_upDownOpacity">&darr;</button>
+        </div>
+        <div id="upDownBlur">
+            <button id="inc_upDownBlur">&uarr;</button>
+            <button id="dec_upDownBlur">&darr;</button>
+        </div>
+        <button id="reset" onclick=reset()>Reset</button>
+    </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html> 

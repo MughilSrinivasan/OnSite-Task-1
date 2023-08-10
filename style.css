@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+
+body{
+    background-color: black;
+}
+.header{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    color:red;
+    font-family: 'Borel', cursive;
+    background: lightblue;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 35px;
+    font-size: 50px;
+    font-weight: bold;
+}
+#mainBody{
+    display: block;
+    margin-top: 50px;
+    width: 800px;
+    height: 400px;
+    background-color: lightcyan;
+    border: 1px solid black;
+    cursor: crosshair;
+}
+.photoArea{
+    display: block;
+    
+}
+.uploadSection{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: lightgreen;
+    justify-content: center;
+    align-items: center;
+}
+#inputFile{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 80px;
+}
+#controls{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(32, 178, 170);
+    cursor: pointer;
+}
+.imageArea{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.buttonControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(32, 178, 170);
+    color:navy;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'REM', sans-serif;
+    cursor: pointer;
+    border: 0px;
+    height: 80px;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    width: calc(100vw/9);
+    transition: 0.75s;
+}
+.buttonControl:hover{
+    background-color:rgb(0, 251, 255) ;
+}
+.buttonControl:active{
+    background-color: white;
+}
+.buttonControl::after {
+    content: '';
+    position: absolute;
+    height: 80%;
+    bottom: 10%;
+    right: 0;
+    width: 2px;
+    background-color: indigo;
+}
+.buttonControl:last-child::after {
+    display: none;
+}
+.controlContainer{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height:350px;
+    align-items: center;
+    justify-content: space-around
+}
+#inc_upDownBrightness{
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+#inc_upDownBrightness:hover{
+    background-color: greenyellow;
+}
+#inc_upDownBrightness:active {
+    transform: scale(0.9);
+}
+#dec_upDownBrightness{
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightcoral;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+#dec_upDownBrightness:hover {
+    background-color: saddlebrown;
+}
+#dec_upDownBrightness:active {
+    transform: scale(0.8);
+}
+#inc_upDownContrast {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#inc_upDownContrast:hover {
+    background-color: greenyellow;
+}
+
+#inc_upDownContrast:active {
+    transform: scale(0.9);
+}
+
+#dec_upDownContrast {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightcoral;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#dec_upDownContrast:hover {
+    background-color: saddlebrown;
+}
+
+#dec_upDownContrast:active {
+    transform: scale(0.8);
+}
+#inc_upDownSaturate {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#inc_upDownSaturate:hover {
+    background-color: greenyellow;
+}
+
+#inc_upDownSaturate:active {
+    transform: scale(0.9);
+}
+
+#dec_upDownSaturate {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightcoral;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#dec_upDownSaturate:hover {
+    background-color: saddlebrown;
+}
+
+#dec_upDownSaturate:active {
+    transform: scale(0.8);
+}
+#inc_upDownSepia {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#inc_upDownSepia:hover {
+    background-color: greenyellow;
+}
+
+#inc_upDownSepia:active {
+    transform: scale(0.9);
+}
+
+#dec_upDownSepia {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightcoral;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#dec_upDownSepia:hover {
+    background-color: saddlebrown;
+}
+
+#dec_upDownSepia:active {
+    transform: scale(0.8);
+}
+#inc_upDownGrayscale {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#inc_upDownGrayscale:hover {
+    background-color: greenyellow;
+}
+
+#inc_upDownGrayscale:active {
+    transform: scale(0.9);
+}
+
+#dec_upDownGrayscale {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightcoral;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#dec_upDownGrayscale:hover {
+    background-color: saddlebrown;
+}
+
+#dec_upDownGrayscale:active {
+    transform: scale(0.8);
+}
+#inc_upDownHue {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#inc_upDownHue:hover {
+    background-color: greenyellow;
+}
+
+#inc_upDownHue:active {
+    transform: scale(0.9);
+}
+
+#dec_upDownHue {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightcoral;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#dec_upDownHue:hover {
+    background-color: saddlebrown;
+}
+
+#dec_upDownHue:active {
+    transform: scale(0.8);
+}
+#inc_upDownBlur {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#inc_upDownBlur:hover {
+    background-color: greenyellow;
+}
+
+#inc_upDownBlur:active {
+    transform: scale(0.9);
+}
+
+#dec_upDownBlur {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightcoral;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#dec_upDownBlur:hover {
+    background-color: saddlebrown;
+}
+
+#dec_upDownBlur:active {
+    transform: scale(0.8);
+}
+#inc_upDownOpacity {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#inc_upDownOpacity:hover {
+    background-color: greenyellow;
+}
+
+#inc_upDownOpacity:active {
+    transform: scale(0.9);
+}
+
+#dec_upDownOpacity {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightcoral;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#dec_upDownOpacity:hover {
+    background-color: saddlebrown;
+}
+
+#dec_upDownOpacity:active {
+    transform: scale(0.8);
+}
+#inc_upDownInvert {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#inc_upDownInvert:hover {
+    background-color: greenyellow;
+}
+
+#inc_upDownInvert:active {
+    transform: scale(0.9);
+}
+
+#dec_upDownInvert {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: lightcoral;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.5s;
+}
+
+#dec_upDownInvert:hover {
+    background-color: saddlebrown;
+}
+
+#dec_upDownInvert:active {
+    transform: scale(0.8);
+}
+#imageData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Preahvihear', sans-serif;
+    color:yellow;
+}
+#reset{
+    display: block;
+    height: 30px;
+    border: 0px;
+    background-color: orangered;
+    color:chartreuse;
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+#reset:hover{
+    background-color: navy;
+}
+#reset:active{
+    transform: scale(0.9);
+}
+#upDownBrightness{
+    display: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 175px;
+}
+#upDownContrast {
+        display: none;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 175px;
+    }
+#upDownSepia{
+        display: none;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 175px;
+    }
+#upDownHue{
+        display: none;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 175px;
+    }
+#upDownSaturate {
+        display: none;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 175px;
+    }
+#upDownGrayscale {
+    display: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 175px;
+}
+#upDownBlur{
+        display: none;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 175px;
+    }
+#upDownOpacity{
+        display: none;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 175px;
+    }
+#upDownInvert {
+        display: none;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 175px;
+        }
